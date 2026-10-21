@@ -185,12 +185,22 @@
   (function trocaPalavra() {
     var el = $('#troca'), i = 0;
     function mostra(txt) {
-      el.innerHTML = txt.split('').map(function (c, j) { return '<span class="letra" style="animation-delay:' + (j * 22) + 'ms">' + (c === ' ' ? '&nbsp;' : esc(c)) + '</span>'; }).join('');
+      // letras agrupadas por palavra, para a quebra de linha nunca cortar uma palavra no meio
+      var j = 0;
+      el.innerHTML = txt.split(' ').map(function (pal) {
+        return '<span class="palavra">' + pal.split('').map(function (c) { return '<span class="letra" style="animation-delay:' + (j++ * 22) + 'ms">' + esc(c) + '</span>'; }).join('') + '</span>';
+      }).join(' ');
       el.setAttribute('aria-label', txt);
-      // cada letra pinta o seu pedaço do degradê, para a palavra continuar com uma cor só correndo
+      pinta();
+    }
+    // cada letra pinta o seu pedaço do degradê, para a palavra continuar com uma cor só correndo
+    function pinta() {
       var largura = el.offsetWidth;
       $$('.letra', el).forEach(function (l) { l.style.backgroundSize = largura + 'px 100%'; l.style.backgroundPosition = -l.offsetLeft + 'px 0'; });
     }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(pinta);
+    window.addEventListener('resize', pinta);
+    mostra(PALAVRAS[0]);
     if (calmo) return;
     setInterval(function () { i = (i + 1) % PALAVRAS.length; mostra(PALAVRAS[i]); }, 3200);
   })();

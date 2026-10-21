@@ -131,7 +131,8 @@ body.menu-aberto .menu-btn span { background: var(--tinta); }
 .hero { position: relative; min-height: 100svh; padding: calc(110px + env(safe-area-inset-top)) var(--gutter) 60px; display: grid; gap: 48px; align-content: center; overflow: hidden; }
 .hero h1 { max-width: 13ch; }
 .troca { display: inline-block; min-width: 4ch; position: relative; }
-.troca .letra { display: inline-block; animation: letra .5s var(--mola) both; background: var(--degrade); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.troca .palavra { display: inline-block; white-space: nowrap; }
+.troca .letra { display: inline-block; animation: letra .5s var(--mola) both; background: linear-gradient(90deg, #5E4A92 0%, #3F6A93 50%, #0B8A4E 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 @keyframes letra { from { opacity: 0; transform: translateY(.5em) rotate(8deg); } }
 .selos { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .selos li { font-size: 14px; font-weight: 600; color: var(--texto); padding: 8px 14px 8px 30px; border-radius: 999px; background: rgba(255,255,255,.7); position: relative; }
