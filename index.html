@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DERS · Sites que vendem por você</title>
+<meta name="description" content="A DERS cria sites, sistemas e presença no Google para pequenos negócios. Você recebe um protótipo do seu site antes de decidir.">
+<meta name="theme-color" content="#5E4A92">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="DERS · Sites que vendem por você">
+<meta property="og:description" content="Responda algumas perguntas e receba o protótipo do site da sua empresa, com a sua cara, antes de decidir.">
+<meta property="og:image" content="https://ders-site.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&family=Syne:wght@600..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- Intro: as duas peças da marca se encaixam e a logo vai para o canto -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-logo" id="intro-logo">
+    <span class="intro-simb"><img class="peca-s" src="marca-s.png" alt=""><img class="peca-d" src="marca-d.png" alt=""></span>
+    <img class="intro-palavra" src="marca-ders.png" alt="">
+  </div>
+  <span class="intro-onda"></span>
+</div>
+
+<!-- Fundo vivo -->
+<div class="fundo" aria-hidden="true"><span class="mancha m1"></span><span class="mancha m2"></span><span class="mancha m3"></span><span class="grao"></span></div>
+
+<!-- Topo -->
+<header class="topo" id="topo">
+  <a class="topo-logo" href="#inicio" aria-label="DERS, início"><img id="logo-topo" src="logo.png" alt="DERS" width="886" height="240"></a>
+  <nav class="topo-nav" aria-label="Seções">
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#perguntas">Dúvidas</a>
+  </nav>
+  <a class="btn principal pequeno topo-cta" data-forms href="#">Quero meu site</a>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menu">
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#descubra">Qual site é o meu?</a>
+    <a href="#solucoes">Soluções e valores</a>
+    <a href="#sistemas">Sistemas</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#perguntas">Dúvidas</a>
+  </nav>
+  <a class="btn principal" data-forms href="#">Quero meu protótipo grátis</a>
+  <p class="menu-redes"><a href="https://instagram.com/ders.digital" target="_blank" rel="noopener">Instagram @ders.digital</a></p>
+</div>
+
+<main id="conteudo">
+
+  <!-- 1. Primeira tela: sites reais rolando dentro dos celulares -->
+  <section class="hero" id="inicio">
+    <div class="hero-texto">
+      <p class="rotulo">Sites · Sistemas · Google · WhatsApp</p>
+      <h1>Seu negócio com um site que <em class="troca" id="troca">vende por você</em></h1>
+      <p class="lead">A DERS cria sites com a cara da sua marca, feitos primeiro para o celular e prontos para levar o cliente até você. Você responde algumas perguntas e <b>recebe um protótipo do seu site antes de decidir</b>.</p>
+      <div class="acoes">
+        <a class="btn principal magnetico" data-forms href="#">Quero meu protótipo grátis <span class="seta" aria-hidden="true">→</span></a>
+        <a class="btn vidro" href="#portfolio">Ver trabalhos</a>
+      </div>
+      <ul class="selos">
+        <li>Protótipo antes de fechar</li>
+        <li>Feito para celular</li>
+        <li>Seguro e com LGPD</li>
+      </ul>
+    </div>
+    <div class="vitrine" id="vitrine" aria-label="Sites criados pela DERS">
+      <!-- celulares montados pelo script.js a partir de PORTFOLIO -->
+    </div>
+  </section>
+
+  <!-- 2. Como funciona -->
+  <section class="secao como" id="como-funciona">
+    <div class="secao-cab">
+      <p class="rotulo">Como funciona</p>
+      <h2>Você vê o seu site <em>antes de pagar</em></h2>
+      <p class="lead">Sem reunião longa e sem pagar no escuro. O caminho é este:</p>
+    </div>
+    <ol class="trilha" id="trilha"></ol>
+  </section>
+
+  <!-- 3. Interação assinatura: descubra o site certo e veja as peças se encaixando -->
+  <section class="secao descubra" id="descubra">
+    <div class="secao-cab">
+      <p class="rotulo">Qual site é o seu?</p>
+      <h2>Responda 3 perguntas e veja o seu site <em>se montar</em></h2>
+    </div>
+    <div class="descubra-grade">
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+      <div class="montagem" aria-hidden="true">
+        <div class="tela-montagem" id="tela-montagem"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Soluções e valores -->
+  <section class="secao solucoes" id="solucoes">
+    <div class="secao-cab">
+      <p class="rotulo">Soluções</p>
+      <h2>Tudo o que a DERS pode <em>fazer pelo seu negócio</em></h2>
+      <p class="lead">Os valores são "a partir de". O valor final sai depois de entendermos o seu negócio e o que o projeto precisa.</p>
+    </div>
+    <div class="grupos" id="grupos" role="tablist" aria-label="Grupos de soluções"></div>
+    <ul class="servicos" id="servicos"></ul>
+  </section>
+
+  <!-- 5. Sistemas -->
+  <section class="secao sistemas" id="sistemas">
+    <div class="sistemas-texto">
+      <p class="rotulo">Sistemas e painéis</p>
+      <h2>Seu cliente agenda no site. <em>Você aprova no painel.</em></h2>
+      <p class="lead">Para quem precisa de mais que um site: agenda online, pedidos, área com login e resposta automática no WhatsApp. Tudo num painel que só você acessa.</p>
+      <ul class="lista-check" id="lista-sistemas"></ul>
+      <div class="acoes">
+        <a class="btn principal" id="link-demo" href="#" target="_blank" rel="noopener">Ver a demonstração <span class="seta" aria-hidden="true">→</span></a>
+        <a class="btn vidro" data-forms href="#">Quero um sistema</a>
+      </div>
+      <p class="miudo">Na demonstração, use o usuário <b>demo</b> e a senha <b>demo</b>. Nada é salvo.</p>
+    </div>
+    <div class="sistemas-midia">
+      <figure class="tela-pc"><img src="port-sistema-pc.webp" alt="Tela do Sistema DERS no computador, com um pedido aberto" loading="lazy" width="960" height="600"></figure>
+      <figure class="cel cel-flutua"><span class="cel-tela"><img src="port-sistema-topo.webp" alt="Sistema DERS no celular, com a lista de pedidos" loading="lazy" width="390" height="844"></span></figure>
+    </div>
+  </section>
+
+  <!-- 6. Portfólio -->
+  <section class="secao portfolio" id="portfolio">
+    <div class="secao-cab">
+      <p class="rotulo">Portfólio</p>
+      <h2>Sites que <em>já estão no ar</em></h2>
+      <p class="lead">Arraste para o lado e toque para abrir.</p>
+    </div>
+    <div class="trilho" id="trilho" tabindex="0" aria-label="Trabalhos da DERS. Use as setas para navegar.">
+      <ul class="cartoes-port" id="cartoes-port"></ul>
+    </div>
+  </section>
+
+  <!-- 7. Estrutura e segurança -->
+  <section class="secao seguranca" id="seguranca">
+    <div class="secao-cab">
+      <p class="rotulo">Estrutura e segurança</p>
+      <h2>Seu site não é <em>só aparência</em></h2>
+      <p class="lead">Por trás de cada site existe uma estrutura que faz tudo funcionar com segurança. Ela já vem em todos os projetos.</p>
+    </div>
+    <div class="cadeia" id="cadeia" aria-label="Etapas de todo projeto"></div>
+    <ul class="pilares" id="pilares"></ul>
+    <div class="completo">
+      <h3>Seu projeto precisa de cadastro, login ou pagamento?</h3>
+      <p>Aí a estrutura muda: banco de dados, login seguro, regras de acesso e cuidados extras com os dados das pessoas. Pagamentos sempre passam por uma empresa de pagamento: o site nunca guarda dados de cartão.</p>
+      <ul class="etiquetas" id="etiquetas-completo"></ul>
+    </div>
+  </section>
+
+  <!-- 8. Cuidado contínuo -->
+  <section class="secao cuidado" id="cuidado">
+    <div class="secao-cab">
+      <p class="rotulo">Depois que o site está no ar</p>
+      <h2>Seu site continua <em>sendo cuidado</em></h2>
+    </div>
+    <div class="planos" id="planos"></div>
+    <p class="miudo centro">Prefere sem mensalidade? Alterações avulsas a partir de R$ 20, com o valor informado antes.</p>
+  </section>
+
+  <!-- 9. Perguntas frequentes -->
+  <section class="secao perguntas" id="perguntas">
+    <div class="secao-cab">
+      <p class="rotulo">Dúvidas</p>
+      <h2>Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq" id="faq"></div>
+  </section>
+
+  <!-- 10. Chamada final -->
+  <section class="final" id="contato">
+    <div class="final-caixa">
+      <span class="final-simb" aria-hidden="true"><img class="peca-s" src="marca-s.png" alt=""><img class="peca-d" src="marca-d.png" alt=""></span>
+      <h2>Vamos montar o <em>site da sua empresa?</em></h2>
+      <p>Leva uns 5 minutos para responder. Você escolhe o melhor horário e a gente te liga com o protótipo pronto.</p>
+      <div class="acoes centro">
+        <a class="btn branco magnetico" data-forms href="#">Quero meu protótipo grátis <span class="seta" aria-hidden="true">→</span></a>
+        <a class="btn vidro-escuro" href="https://wa.me/5511948925277?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20sites%20da%20DERS." target="_blank" rel="noopener">Tirar uma dúvida no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape-grade">
+    <div>
+      <img src="logo-branca.png" alt="DERS" width="886" height="240" class="rodape-logo" loading="lazy">
+      <p>Soluções digitais para empresas que querem crescer.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="#solucoes">Soluções</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#perguntas">Dúvidas</a>
+    </nav>
+    <nav aria-label="Contato e informações">
+      <a href="https://wa.me/5511948925277" target="_blank" rel="noopener">WhatsApp (11) 94892-5277</a>
+      <a href="https://instagram.com/ders.digital" target="_blank" rel="noopener">Instagram @ders.digital</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <button type="button" class="link-botao" data-abrir-cookies>Preferências de cookies</button>
+    </nav>
+  </div>
+  <p class="rodape-fim">© <span id="ano">2026</span> DERS. Todos os direitos reservados.</p>
+</footer>
+
+<a class="flutuante" data-forms href="#" aria-label="Quero meu protótipo grátis"><span class="flutuante-simb" aria-hidden="true"><img src="marca-s.png" alt=""><img src="marca-d.png" alt=""></span><span>Protótipo grátis</span></a>
+
+<script src="config.js"></script>
+<script src="cookies.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
